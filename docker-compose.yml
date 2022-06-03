@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  node:
+    build:
+      context: .
+    tty: true
+    command: "npm run dev"
+    ports:
+      - "${NODE_PORT:-8080}:3000"
+    volumes:
+      - ".:/app"

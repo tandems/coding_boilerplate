@@ -1,13 +1,38 @@
 {
   "name": "coding_boilerplate",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Kazuya Tateishi <k-tateishi@tandems.co.jp> (https://kzy52.github.io)",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "npm run lint:prettier && npm run lint:eslint && npm run lint:style ",
+    "lint:prettier": "prettier --check --loglevel=warn '**/*.{js,ts,scss}'",
+    "lint:eslint": "eslint '**/*.{js,ts}'",
+    "lint:style": "stylelint '**/*.{css,scss}'",
+    "format": "npm run format:prettier && npm run format:eslint && npm run format:style",
+    "format:prettier": "prettier --check --write --loglevel=warn '**/*.{js,ts,scss}'",
+    "format:eslint": "eslint --fix '**/*.{js,ts}'",
+    "format:style": "stylelint --fix '**/*.{css,scss}'"
   },
   "devDependencies": {
-    "vite": "^2.9.9"
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "prettier": "^2.6.2",
+    "sass": "^1.52.1",
+    "stylelint": "^14.8.5",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-standard-scss": "^4.0.0",
+    "vite": "^2.9.9",
+    "vite-plugin-handlebars": "^1.6.0"
   }
 }

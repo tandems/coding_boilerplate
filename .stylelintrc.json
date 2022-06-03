@@ -1,0 +1,13 @@
+{
+  "plugins": [],
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss",
+    "stylelint-config-recess-order"
+  ],
+  "rules": {
+    "color-no-invalid-hex": true,
+    "comment-no-empty": true
+  },
+  "ignoreFiles": ["./node_modules/**", "./dist/**"]
+}
